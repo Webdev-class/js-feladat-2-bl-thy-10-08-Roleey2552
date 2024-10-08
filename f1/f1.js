@@ -11,7 +11,7 @@ async function f1(lat, long, timeStr) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Hálózati hiba');
         }
         const data = await response.json();
 
@@ -24,7 +24,7 @@ async function f1(lat, long, timeStr) {
         
         return avgTemp; 
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error('Hiba történt fetcheléskor:', error);
     }
 }
 
